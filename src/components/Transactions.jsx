@@ -1,4 +1,5 @@
-export const AppTransactions =  ({props}) =>{
+import PropTypes from 'prop-types';
+export  function  Transactions ({props}) {
     return(
       <div className="container">
                <table className="transaction-history">
@@ -25,3 +26,13 @@ export const AppTransactions =  ({props}) =>{
       </div>
     )
 }
+Transactions.propTypes = {
+  props: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

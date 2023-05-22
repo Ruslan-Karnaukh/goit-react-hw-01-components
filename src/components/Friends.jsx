@@ -1,4 +1,5 @@
-export const AppFriends = ({props}) => {
+import PropTypes from 'prop-types';
+export function  Friends ({props})  {
     return (
      <div className="container">
            <ul className="friend-list">
@@ -20,3 +21,11 @@ export const AppFriends = ({props}) => {
      </div>
     )
 }
+
+Friends.propTypes = {
+    props: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+      })
+    ).isRequired,
+  };
