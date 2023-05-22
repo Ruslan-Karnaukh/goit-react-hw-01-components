@@ -29,7 +29,7 @@ export const App = () =>{
 
   <Data title="Upload stats" props={data}/>
 
-  <Friends props={friends}/>
+  <Friends friends={friends}/>
 
   <Transactions props={transactions}/>
         </div>
